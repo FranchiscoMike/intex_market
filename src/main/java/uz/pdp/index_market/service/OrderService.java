@@ -22,7 +22,7 @@ public class OrderService {
     public ApiResponse all() {
         List<Order> all = orderRepository.findAll();
 
-        if (all.isEmpty()) {
+        if (all.size()==0) {
             return new ApiResponse("List is empty",false);
         } else {
             return new ApiResponse("All",true,all);

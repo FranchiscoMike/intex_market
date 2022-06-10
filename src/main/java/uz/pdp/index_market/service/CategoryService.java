@@ -22,7 +22,7 @@ public class CategoryService {
     public ApiResponse all() {
         String message = "";
         List<Category> all = categoryRepository.findByActiveIsTrue();
-        if (all.isEmpty()) {
+        if (all.size()==0) {
             message = "There is no categories!";
         } else {
             message = "All categories";

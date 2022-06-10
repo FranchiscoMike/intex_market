@@ -51,9 +51,9 @@ public class AttachmentController {
         Attachment save = attachmentRepository.save(attachment);
         // serverga yuklash
 
-        Path path = Path.of(uploadingDirectory + "/" + name);
-
-        Files.copy(file.getInputStream(), path);
+//        Path path = Path.of(uploadingDirectory + "/" + name);
+        String s = uploadingDirectory + "/" + name;
+        Files.copy(file.getInputStream(), Path.of(s));
 
         return "saqlandi id : " + save.getId();
 

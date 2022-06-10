@@ -59,7 +59,7 @@ public class UserRoleService {
 
     public ApiResponse edit(UUID id, String new_name) {  // name va id bo'yicha search qilish kerak edi
         Optional<UserRole> byName = roleRepository.findByName(new_name);
-        if (byName.isEmpty() ) {
+        if (!byName.isPresent() ) {
             // yani bunaqa name li role bo'lmasa
             Optional<UserRole> byId = roleRepository.findById(id);
             if (byId.isPresent()) {
