@@ -46,7 +46,7 @@ public class OrderService {
         order.setUsername(dto.getUsername());
 
         Optional<Product> optionalProduct = productRepository.findById(dto.getProduct_id());
-        if (optionalProduct.isEmpty()) {
+        if (!optionalProduct.isPresent()) {
             return new ApiResponse("Product not found",false);
         }
         order.setProduct(optionalProduct.get());
