@@ -9,9 +9,7 @@ import uz.pdp.index_market.entity.Attachment;
 import uz.pdp.index_market.repository.AttachmentRepository;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Iterator;
@@ -52,8 +50,15 @@ public class AttachmentController {
         // serverga yuklash
 
 //        Path path = Path.of(uploadingDirectory + "/" + name);
-        String s = uploadingDirectory + "/" + name;
-        Files.copy(file.getInputStream(), Path.of(s));
+
+        // bitta filega saqplash
+//        String s = uploadingDirectory + "/" + name;
+//        Files.copy(file.getInputStream(), Path.of(s));
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter(uploadingDirectory+"/"+name));
+
+        writer.write(String.valueOf(file.getInputStream()));
+        writer.close();
 
         return "saqlandi id : " + save.getId();
 
