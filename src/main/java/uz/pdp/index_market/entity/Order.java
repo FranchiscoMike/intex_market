@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
-@Entity
+@Entity(name = "orders")
 @Transactional
 public class Order { // orderlar idsini long qilaman agar muammo bo'lsa yana o'zgartiraman
     @Id
