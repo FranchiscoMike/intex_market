@@ -1,0 +1,18 @@
+2-Variant
+
+Online test ishlash bot yasang. Bunda datur ishga tushganda bitta admin va test ishlash uchun baza shakllangan holatda ishga kamida ikkita fandan test ishlash bazasi shakllangan holatda ishga tushsin ( fanlar va ular bo'yicha har biri uchun testlar va testlarga variant javoblar qo’shilgan holarda. Bunda har bir fan uchun alohida togri javob uchun belgilangan ball ham kiritilgan bolsin). Bot ishga tushganda foydalanuvchilar dan share kontact qilishni so’rasin va share qilingan raqamga tasdiqlash kodi jo’natilsin. Bu uchun Twilio API dan foydalanish tavsiya qilinadi.
+
+      1)Agar Tasdiqlash kodini to’g’ri kiritgan foydalanuvchi admin bo’lsa, unga quyidagi imkoniyatlar berilsin : 
+
+a)	Foydalanuvchilar ro’yxatini excel file ko’rinishida yuklab olish
+b)	Barcha fanlar bo’yicha ishlangan testlarni pdf file ko’rinishida yuklab olish
+c)	Fan CRUD
+d)	Test va javoblar CRUD
+
+     2) Agar Tasdiqlash kodini to’g’ri kiritgan foydalanuvchi oddiy 
+         foydalanuvchi bo’lsa, unga quyidagi imkoniyatlar berilsin :
+a)	Fan tanlash va tanlagan fani bo’yicha testlar ishlash
+b)	Barcha oldin ishlagan testlarini statistikasini pdf file ko’rinishida yuklab olish.
+
+
+// mazza //qaysi user qachon qancha test ishlagan nech aballa to’plagan ? qaysi kuni ishlagan ? va reyting bo’yicha ham excelga ham tayyorlash 
